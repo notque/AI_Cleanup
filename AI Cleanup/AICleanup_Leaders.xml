@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<AiFavoredItems>
+		<!-- Scythian Horse Archers use Ranged PromotionClass-->
+		<Row ListType="TomyrisiUnitBuilds" Item="PROMOTION_CLASS_RANGED" Value="1" />
+		<!-- Generic build strategy that's OK for everything (would prefer some way to set both production and food focus) -->
+		<Row ListType="DefaultCitySpecialization" Item="BUILD_FOR_GENERIC" />
+		<!-- This was an odd one. Gold for units was set to 4, gold for plots and GPs was set to 1, and gold for splurge was set to 3.
+			 Splurge should always be last in the priority list, so I assumed priority went lowest->highest and set gold for units to 2. -->
+		<Update>
+			<Where ListType="DefaultSavings" Item="SAVING_UNITS" />
+			<Set Value="2" />
+		</Update>
+		<!-- Adjusted default flavors a bit as an experiment, active defense flavor should be more than city (passive) defense flavor anyway. -->
+		<Update>
+			<Where ListType="DefaultFlavorList" Item="Offense" />
+			<Set Value="6" />
+		</Update>
+		<Update>
+			<Where ListType="DefaultFlavorList" Item="Defense" />
+			<Set Value="4" />
+		</Update>
+		<Update>
+			<Where ListType="DefaultFlavorList" Item="Expansion" />
+			<Set Value="7" />
+		</Update>
+	</AiFavoredItems>
+	<AiBuildSpecializations>
+		<!-- If a city is building trade units, they should have production focus, not gold focus. -->
+		<Update>
+			<Where SpecializationType="BUILD_TRADE_UNITS" />
+			<Set PrioritizationYield="YIELD_PRODUCTION" />
+		</Update>
+		<!-- Generic build strategy that's OK for everything (would prefer some way to set both production and food focus) -->
+		<Row SpecializationType="BUILD_FOR_GENERIC" BuildingYield="YIELD_FOOD" IncludePopulation="true" IncludeMilitaryUnits="true" IncludeTradeUnits="true" PrioritizationYield="YIELD_PRODUCTION" />
+	</AiBuildSpecializations>
+</GameInfo>

@@ -1,0 +1,71 @@
+Delnar_Ersike's AI Cleanup
+
+Feel free to use this mod or any of its components in any of your own mods, public or private, so long as you give proper accreditation.
+
+Changelog:
+
+v7 - 2016-Oct-31
+
+* Lowered the cap on settling operations to 2 (from 16 before, now 1) to make sure the AI doesn't spam settlers when they want new cities but already have settlers out
+* Added a permanent favored list that makes the Industrial Complex District a favored district for all major civs
+* Added a permanent favored list that makes all unique districts favored for their respective civs
+* Added the Dynamic/Phased turns bugfix (thanks to notque and FilthyRobot) because it's a harmless bugfix that's vital for multiplayer play
+
+v6 - 2016-Oct-30
+
+* Fixed a bug that was causing the AI to not move settlers around properly
+
+v5 - 2016-Oct-29
+
+* Added the Combat AIType to Scouts and Rangers so that they can participate in operation slots that only call for a unit with some combat strength (e.g. settler escort)
+* Made the cap removal on settling operations properly work by assigning it a significantly high cap of 16 instead of deleting the cap entry, which would cause a cap of 0
+
+v4 - 2016-Oct-29
+
+* Altered the way Settler flavor is increased so that it works properly now hopefully (done through a permanent favored list entry instead of through the pseudoyield's default value).
+
+v3 - 2016-Oct-29
+
+* Added a special thanks section to the mod's description
+* Fixed a bug that stopped the behavior tree edit for upgrading units from working
+* Increased Settler flavor by 50%. This is done modifying settler pseudoyield's default value, because apparently "pseudoyield" is what flavors are now called
+
+v2 - 2016-Oct-29
+
+* Fixed a lot of the mod's changes not loading properly (thanks to RushSecond and qqqbbb, kind of shows how rusty I am with non-DLL modding)
+* Removed the Cavalry UnitAIType tag from Indian Varu because they don't have high movement (thanks to notque for pointing this out)
+* Altered the priorities of certain unit move types to make the AI pillage districts and traders more, attack civilians less, attack encampments less, use air attacks more frequently, and (hopefully) properly make armies and corps.
+* Altered city attack operations so that they are less saturated with melee units
+* Altered simple city attack operation to allow for a lot more ranged units (raised maximum cap from 3 to 12)
+* Altered the Upgrade Units behavior list so that the AI can disband units that it would normally wish to upgrade
+* Allowed the AI to run one extra city defense operation for each war they are in to help defend against simultaneous attacks targetting different cities
+* Removed the cap on settling operations so that the AI can have as many settlers out simultaneously as it wants
+* Added a new operation that should function like an annoying harassment operation: one or two cavalry units should run around in enemy territory, pillaging districts primarily
+	- Note: if you want to see an example behavior tree that's commented, this is what you should check out
+
+v1 - 2016-Oct-21
+
+AI-only changes:
+* Added the Explore UnitAIType to Spies because they can be used for scouting
+* Added the Ranged UnitAIType to Rangers because they have a range 1 ranged attack (like Slingers)
+* Added the Civilian UnitAIType to Naturalists because they have no combat strength
+* Added the Explore UnitAIType to Modern AT because they were the only melee land unit missing the entry (this just means the AI can use them as scouts if it wants to)
+* Removed the Explore UnitAIType from Modern Armor and replaced it with the Melee UnitAIType to make them consistent with all other Heavy Cavalry entries
+* Added the Civilian UnitAIType to Military Engineers because they have no combat strength
+* Added the Build UnitAIType to Legions because they can build the same improvements Military Engineers can, so the AI should be able to use them as builders
+* Added the Cavalry UnitAIType to Barbarian Horse Archers, Egyption Chariot Archers, Scythian Horse Archers, American Rough Riders, Russian Cossacks, Indian Varu, and Arabian Mamluks because they were all missing despite having cavalry movespeeds
+* Added the Explore UnitAIType to Barbarian Horse Archers and Scythian Horse Archers to make them consistent with the light cavalry roles in which they could act
+* Added a Ranged Promotion Class build preference for Tomyrisi because Scythian Horse Archers have that promotion class (not the light cavalry one)
+* Added a new, generic CitySpecialization to the city specializations list that is meant to act as a stand-in for split food-production preference
+* (Hopefully) altered the gold spending priorities of the default savings list so that splurge spending is rated less important than unit/upgrade spending
+* Tweaked flavors in the default flavor list to slightly value expansion over offense and value active defense over passive defense
+* Altered the preferred yield focus of the "build trade units" specialization to be production instead of gold because that would end up producing the trade unit(s) faster
+* Reduced current task bias from 80 to 50 to hopefully reduce AI railroading as much
+* Reduced turns to wait between trade offers from 10 to 3 to make it consistent with turns to wait between peace offers
+* (Hopefully) Reduced delay between denounce and DoW to allow the AI to truly execute surprise attacks
+
+Changes with some non-AI effects:
+* Added the Ranged TypeTag to Rangers because they have a range 1 ranged attack
+* Added the Melee TypeTag to Garde Imperiale because they were somehow missing it
+* Added the Naval Ranged TypeTag to Privateers, English Sea Dogs, Submarines, German U-Boats, and Nuclear Submarines because they all have ranged attacks
+* Increased the fertility rating of bonus resources from 1 to 2 to correspond to their usefulness vs. other fertility ratings (strategic resource = 3, river = 3, coast = 1)

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<AiListTypes>
+		<Row ListType="FavorUniqueDistricts" />
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="FavorUniqueDistricts" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="Districts"/>
+	</AiLists>
+	<AiFavoredItems>
+		<!-- Favor all districts that are unique to the civ since they tend to be better versions of base districts -->
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_ACROPOLIS" Favored="true"/>
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_BATH" Favored="true"/>
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_HANSA" Favored="true"/>
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_LAVRA" Favored="true"/>
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_MBANZA" Favored="true"/>
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_STREET_CARNIVAL" Favored="true"/>
+		<Row ListType="FavorUniqueDistricts" Item="DISTRICT_ROYAL_NAVY_DOCKYARD" Favored="true"/>
+	</AiFavoredItems>
+</GameInfo>

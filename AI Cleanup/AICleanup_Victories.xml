@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<!-- All victory strategies except for religious had their types not defined, probably caused them to stop working -->
+	<Types>
+		<Row Type="VICTORY_STRATEGY_CULTURAL_VICTORY" Kind="KIND_VICTORY_STRATEGY" />
+		<Row Type="VICTORY_STRATEGY_MILITARY_VICTORY" Kind="KIND_VICTORY_STRATEGY" />
+		<Row Type="VICTORY_STRATEGY_SCIENCE_VICTORY" Kind="KIND_VICTORY_STRATEGY" />
+		<Row Type="STRATEGY_RAPID_EXPANSION" Kind="KIND_VICTORY_STRATEGY" />
+		<Row Type="STRATEGY_NAVAL" Kind="KIND_VICTORY_STRATEGY" />
+	</Types>
+</GameInfo>

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<AiListTypes>
+		<Row ListType="SettlerLove" />
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="SettlerLove" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="PseudoYields"/>
+	</AiLists>
+	<AiFavoredItems>
+		<!-- Permanently increases Settler Flavor by 25 -->
+		<Row ListType="SettlerLove" Item="PSEUDOYIELD_UNIT_SETTLER" Value="25"/>
+	</AiFavoredItems>
+</GameInfo>

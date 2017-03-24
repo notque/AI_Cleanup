@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<GlobalParameters>
+		<!-- Hopefully this reduces excessive railroading without making the AI too schizophrenic -->
+		<Update>
+			<Where Name="AI_CURRENT_TASK_BIAS" />
+			<Set Value="50" />
+		</Update>
+		<!-- Turns to wait between trades was much higher than turns to wait between peace offers, they're now equal -->
+		<Update>
+			<Where Name="AI_TURNS_BETWEEN_TRADES" />
+			<Set Value="3" />
+		</Update>
+		<!-- If this works how I think it works, this would allow for actual AI surprise attacks, since they can denounce and then immediately attack should they be in position -->
+		<Update>
+			<Where Name="DIPLOMACY_DENOUNCE_WAR_DELAY" />
+			<Set Value="1" />
+		</Update>
+		<!-- Bonus resources are more useful than featureless coast, so their fertility was bumped up to 2 (comparison: strategic resources' is 3) -->
+		<Update>
+			<Where Name="BONUS_RESOURCE_FERTILITY" />
+			<Set Value="2" />
+		</Update> 
+	</GlobalParameters>
+</GameInfo>

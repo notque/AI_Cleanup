@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<OpTeamRequirements>
+		<!-- Set maximum number of melee units in a simple city attack to 6 (maximum tiles adjacent to a given tile) -->
+		<Update>
+			<Where TeamName="Simple City Attack Force" AiType="UNITTYPE_MELEE" />
+			<Set MaxNumber="6" />
+		</Update>
+		<!-- Increased maximum ranged unit count in simple city attack from 3 (way too small) to 12 (number of tiles 2 hexes away from a given hex) -->
+		<Update>
+			<Where TeamName="Simple City Attack Force" AiType="UNITTYPE_RANGED" />
+			<Set MaxNumber="12" />
+		</Update>
+		<!-- Lowered minimum melee unit count from 4 to 3 and added a cap of 6 to make city attack operations less melee-focused
+			Remember: the AI will still want to match the city's strength, but because it's capped to 6 melee units, it has to make it up with non-melee -->
+		<Update>
+			<Where TeamName="City Attack Force" AiType="UNITTYPE_MELEE" />
+			<Set MinNumber="3" MaxNumber="6" />
+		</Update>
+	</OpTeamRequirements>
+	<AiFavoredItems>
+		<!-- More wars = more cities possibly under simultaneous attack, so this limit needs to be increased for each war -->
+		<Row ListType="PerWarOperationsLimits" Item="OP_DEFENSE" Value="1" />
+		<!-- Limits on settle operations keep Settler pseudoyields in line to make sure the AI doesn't spam them all over the place.
+			 Still, it's better to have a settle limit at 2 to make sure the AI can handle building a settler while sending another one out and/or managing their 2 extra starting settlers on Deity. -->
+		<Update>
+			<Where ListType="BaseOperationsLimits" Item="OP_SETTLE" />
+			<Set Value="2" />
+		</Update>
+	</AiFavoredItems>
+</GameInfo>

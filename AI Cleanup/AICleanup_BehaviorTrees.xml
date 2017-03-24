@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<!-- Delnar: I don't really want to make any extended edits to behavior trees because it's extremely tedious work with a bunch of cross-referencing.
+		Just have a look at the new FastPillage operation's behavior tree and you'll see what I'm talking about.
+		It's fairly obvious that Firaxis uses a proprietary tool to make and edit these trees, so I'd rather wait for them to release the SDK. -->
+	<NodeDataDefinitions>
+		<!-- This allows the "Can Delete" field to work properly -->
+		<Update>
+			<Where DataName="Can Delete" NodeType="Upgrade Units" />
+			<Set UserData="True" />
+		</Update>
+	</NodeDataDefinitions>
+	<TreeData>
+		<!-- This allows the AI to disband units when it's running the upgrade units behavior list -->
+		<Update>
+			<Where DefnId="3" NodeId="4" TreeName="Upgrade Units" />
+			<Set DefaultData="true" />
+		</Update>
+	</TreeData>
+</GameInfo>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Mod id="3beccc48-5a0c-479a-9dd1-39c0b65a571d" version="5">
+	<Properties>
+		<Name>LOC_AICLEANUP_TITLE</Name>
+		<Teaser>LOC_AICLEANUP_TEASER</Teaser>
+		<Description>LOC_AICLEANUP_DESCRIPTION</Description>
+		<Authors>LOC_AICLEANUP_AUTHORS</Authors>
+		<SpecialThanks>LOC_AICLEANUP_SPECIALTHANKS</SpecialThanks>
+	</Properties>
+	<Components>
+		<UpdateDatabase id="AICLEANUP_COMPONENT">
+			<Items>
+				<File>AICleanup_Units.xml</File>
+				<File>AICleanup_GlobalParameters.xml</File>
+				<File>AICleanup_Leaders.xml</File>
+				<File>AICleanup_Victories.xml</File>
+				<File>AICleanup_BehaviorTrees.xml</File>
+				<File>AICleanup_Operations.xml</File>
+				<File>AICleanup_Tactics.xml</File>
+				<File>AICleanup_NewOperation_FastPillage.xml</File>
+				<File>AICleanup_SettlerLove.xml</File>
+				<File>AICleanup_FavorHammerDistrict.xml</File>
+				<File>AICleanup_FavorUniqueDistricts.xml</File>
+			</Items>
+		</UpdateDatabase>
+		<ImportFiles>
+            <Items>
+                <File>Dynamic Turns Fix/ActionPanel.lua</File>
+            </Items>
+        </ImportFiles>
+	</Components>
+	<LocalizedText>
+		<Text id="LOC_AICLEANUP_TITLE">
+			<en_US>AI Cleanup</en_US>
+		</Text>
+		<Text id="LOC_AICLEANUP_TEASER">
+			<en_US>Cleans up and improves the AI</en_US>
+		</Text>
+		<Text id="LOC_AICLEANUP_DESCRIPTION">
+			<en_US>Fixes certain erroneous AI entries in the XML, initial attempts at a bigger AI mod.</en_US>
+		</Text>
+		<Text id="LOC_AICLEANUP_SPECIALTHANKS">
+			<en_US>Notque, Gedemon, peanut butter (yum)</en_US>
+		</Text>
+		<Text id="LOC_AICLEANUP_AUTHORS">
+			<en_US>Delnar_Ersike</en_US>
+		</Text>
+	</LocalizedText>
+	<Files>
+		<File>AICleanup_Units.xml</File>
+		<File>AICleanup_GlobalParameters.xml</File>
+		<File>AICleanup_Leaders.xml</File>
+		<File>AICleanup_Victories.xml</File>
+		<File>AICleanup_BehaviorTrees.xml</File>
+		<File>AICleanup_Operations.xml</File>
+		<File>AICleanup_Tactics.xml</File>
+		<File>AICleanup_NewOperation_FastPillage.xml</File>
+		<File>AICleanup_SettlerLove.xml</File>
+		<File>AICleanup_FavorHammerDistrict.xml</File>
+		<File>AICleanup_FavorUniqueDistricts.xml</File>
+		<File>Dynamic Turns Fix/ActionPanel.lua</File>
+	</Files>
+</Mod>

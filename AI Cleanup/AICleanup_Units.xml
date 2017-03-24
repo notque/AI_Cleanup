@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSPY v2004 rel. 2 U (http://www.xmlspy.com) by Ed Beach (Firaxis Games) -->
+<GameInfo>
+  <UnitAiInfos>
+	<!-- Scouts and Rangers can be combat units, so they get this tag so they can participate in operation slots where only generic combat units are needed -->
+	<Row UnitType="UNIT_SCOUT" AiType="UNITAI_COMBAT" />
+	<Row UnitType="UNIT_RANGER" AiType="UNITAI_COMBAT" />
+	<!-- Spies are extremely useful scouts because they're invisible and they're civilians (no 1UPT problem!) -->
+	<Row UnitType="UNIT_SPY" AiType="UNITAI_EXPLORE" />
+	<!-- Rangers have a range of 1, so they get the ranged unit AI type -->
+	<Row UnitType="UNIT_RANGER" AiType="UNITTYPE_RANGED" />
+	<!-- Naturalists have no combat strength, so they're tagged as civilians -->
+	<Row UnitType="UNIT_NATURALIST" AiType="UNITTYPE_CIVILIAN" />
+	<!-- Modern AT was the only melee unit missing the ability to take the explore unit AI type, this is now fixed -->
+	<Row UnitType="UNIT_MODERN_AT" AiType="UNITAI_EXPLORE" />
+	<!-- For some reason, Modern Armor was the only heavy cavalry with the Explore unit AI type instead of melee unit AI type, this is now fixed -->
+	<Delete UnitType="UNIT_MODERN_ARMOR" AiType="UNITAI_EXPLORE" />
+	<Row UnitType="UNIT_MODERN_ARMOR" AiType="UNITTYPE_MELEE" />
+	<!-- Military engineer has no combat strength, so it's tagged as a civilian in addition to being a builder -->
+	<Row UnitType="UNIT_MILITARY_ENGINEER" AiType="UNITTYPE_CIVILIAN" />
+	<!-- A bunch of uniques were missing the unit AI type entries that their replacements had, this is now fixed -->
+	<Row UnitType="UNIT_BARBARIAN_HORSE_ARCHER" AiType="UNITAI_EXPLORE" />
+	<Row UnitType="UNIT_BARBARIAN_HORSE_ARCHER" AiType="UNITTYPE_CAVALRY" />
+	<Row UnitType="UNIT_EGYPTIAN_CHARIOT_ARCHER" AiType="UNITTYPE_CAVALRY" />
+	<Row UnitType="UNIT_SCYTHIAN_HORSE_ARCHER" AiType="UNITAI_EXPLORE" />
+	<Row UnitType="UNIT_SCYTHIAN_HORSE_ARCHER" AiType="UNITTYPE_CAVALRY" />
+	<Row UnitType="UNIT_AMERICAN_ROUGH_RIDER" AiType="UNITTYPE_CAVALRY" />
+	<Row UnitType="UNIT_RUSSIAN_COSSACK" AiType="UNITTYPE_CAVALRY" />
+	<Row UnitType="UNIT_ARABIAN_MAMLUK" AiType="UNITTYPE_CAVALRY" />
+	<!-- Legions can build the stuff military engineers can, so they get the builder unit AI type just like military engineers -->
+	<Row UnitType="UNIT_ROMAN_LEGION" AiType="UNITAI_BUILD" />
+  </UnitAiInfos>
+  <!-- Tags are tricky because they might have a gameplay effect, kept side-effects to a minimum by cross-referencing promotions -->
+  <TypeTags>
+	<!-- Ranger has ranged attack, so it gets ranged tag -->
+	<Row Type="UNIT_RANGER" Tag="CLASS_RANGED" />
+	<!-- GI was missing melee tag for some reason, this now fixed -->
+	<Row Type="UNIT_FRENCH_GARDE_IMPERIALE" Tag="CLASS_MELEE" />
+	<!-- All subs have ranged attacks (even if they're raiders), so they get the ranged tag -->
+	<Row Type="UNIT_PRIVATEER" Tag="CLASS_NAVAL_RANGED" />
+	<Row Type="UNIT_ENGLISH_SEADOG" Tag="CLASS_NAVAL_RANGED" />
+	<Row Type="UNIT_SUBMARINE" Tag="CLASS_NAVAL_RANGED" />
+	<Row Type="UNIT_GERMAN_UBOAT" Tag="CLASS_NAVAL_RANGED" />
+	<Row Type="UNIT_NUCLEAR_SUBMARINE" Tag="CLASS_NAVAL_RANGED" />
+  </TypeTags>
+</GameInfo>

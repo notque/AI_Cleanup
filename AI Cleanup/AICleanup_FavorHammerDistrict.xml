@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<AiListTypes>
+		<Row ListType="FavorHammerDistrict" />
+	</AiListTypes>
+	<AiLists>
+		<Row ListType="FavorHammerDistrict" LeaderType="TRAIT_LEADER_MAJOR_CIV" System="Districts"/>
+	</AiLists>
+	<AiFavoredItems>
+		<!-- Favor Industrial Districts because they're vital for all cities and strategies -->
+		<Row ListType="FavorHammerDistrict" Item="DISTRICT_INDUSTRIAL_ZONE" Favored="true"/>
+	</AiFavoredItems>
+</GameInfo>
